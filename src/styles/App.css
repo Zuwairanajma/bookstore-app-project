@@ -1,0 +1,16 @@
+.wrapper {
+  width: 90%;
+  height: 100%;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.containerRender {
+  display: flex;
+  flex-direction: row;
+}
+
+.renderRight {
+  margin-right: 200px;
+}

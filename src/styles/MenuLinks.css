@@ -1,0 +1,21 @@
+.nav-bar {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.nav-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 620px;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
