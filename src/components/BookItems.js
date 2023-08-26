@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/BookState.css';
 
-function BookState({ book }) {
+function BookItems({ book }) {
   return (
     <>
       <div className="containerRender" style={{ display: 'flex' }}>
@@ -34,7 +34,7 @@ function BookState({ book }) {
     </>
   );
 }
-BookState.propTypes = {
+BookItems.propTypes = {
   book: PropTypes.objectOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -46,4 +46,4 @@ BookState.propTypes = {
   ).isRequired,
 };
 
-export default BookState;
+export default BookItems;

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import BookState from './BookState';
+import BookItems from './BookItems';
 
 function BookList({ books }) {
   return (
     <div>
       {books.map((book) => (
-        <BookState key={book.id} book={book} />
+        <BookItems key={book.id} book={book} />
       ))}
     </div>
   );
