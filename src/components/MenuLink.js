@@ -11,7 +11,6 @@ function MenuLink() {
         <Link className="NavL" to="/categories">Categories</Link>
       </nav>
     </div>
-  // </div>
   );
 }
 

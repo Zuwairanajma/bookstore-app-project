@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Books from './components/Books';
 import MenuLink from './components/MenuLink';
 import Categories from './routes/Categories';
-// import Book from './routes/BookPage';
 import './styles/App.css';
 
 function App() {
