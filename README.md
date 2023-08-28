@@ -50,7 +50,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Built-in Calculator]**
+- **Use redux store to store all states**
+- **Add React Router Dom for routing to different pages**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,33 +65,35 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-**Node-js**
-**npm**
+- **Node-js**
+- **npm**
 
 ### Setup
 
 Clone this repository to your desired folder:
-
+```
   git clone git@github.com:myaccount/bookstore-app-project.git
-
+```
 ### Install
 
 Install this project with:
-
+```
 npm install
-
+```
 ### Usage
 
 To run the project, execute the following command:
 
+```
 npm start
+```
 
 ### Run tests
 
 To run tests, run the following command:
-
+```
 npm test
-
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
