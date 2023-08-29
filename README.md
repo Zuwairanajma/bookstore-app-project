@@ -65,8 +65,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- **Node-js**
-- **npm**
+ - **Node-js**
+ - **npm**
 
 ### Setup
 
