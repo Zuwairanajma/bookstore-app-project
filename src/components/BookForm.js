@@ -35,25 +35,6 @@ const BookForm = () => {
       setBookData(initialState);
     }
   };
-  // const books = useSelector((state) => state.books);
-  // const [title, setTitle] = useState('');
-  // const [author, setAuthor] = useState('');
-  // const handleAddBook = (title, author) => {
-  //   const newBook = {
-  //     itemId: `${books.length + 1}`,
-  //     title,
-  //     author,
-  //     category: 'uncategorized',
-  //   };
-  //   dispatch(addBook(newBook));
-  // };
-  // function handleClick(e) {
-  //   e.preventDefault();
-  //   if (!title || !author) return;
-  //   handleAddBook(title.trim(), author.trim());
-  //   setTitle('');
-  //   setAuthor('');
-  // }
   return (
     <div className="containerCreateBooks">
       <h3>ADD NEW BOOK</h3>
