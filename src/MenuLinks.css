@@ -1,0 +1,28 @@
+.nav-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 620px;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.Nav-Header {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.NavL {
+  margin-top: 5px;
+}
