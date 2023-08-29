@@ -1,47 +1,93 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const initialState = {
-  // Initial state:
-  books: [
-    {
-      itemId: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-    },
-    {
-      itemId: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-    },
-    {
-      itemId: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-    },
-  ],
-};
+const apiURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zSUAfqgJTcTRwKk6JO0In/books';
+// const initialState = {
+// Initial state:
+// books: [],
+// isLoading: true,
+// err: null,
+// };
+
+// export const getBookItems = createAsyncThunk('books/getBookItems', () =>
+// fetch(apiURL).then((res) => res.data).catch((err) => console.log(err)));
+export const getBookItems = createAsyncThunk('books/getBookItems', async (_, thunkAPI) => {
+  try {
+    const response = await axios.get(apiURL);
+    const data = await response.json();
+    return data; // Return the fetched data as the payload
+  } catch (error) {
+    // throw error; // Rethrow the error to be caught by the rejected case
+    return thunkAPI.rejectWithValue('Request failed');
+  }
+});
+
+export const addBook = createAsyncThunk(
+  'books/addBook',
+  async (book, thunkAPI) => {
+    try {
+      const response = await axios.post(apiURL, book);
+      if (response.status === 201) {
+        thunkAPI.dispatch(getBookItems());
+      }
+      return null;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('Request failed');
+    }
+  },
+);
+
+export const removeBook = createAsyncThunk('books/deleteBook',
+  async (itemId, thunkAPI) => {
+    try {
+      const response = await axios.delete(`${apiURL}/${itemId}`);
+
+      if (response.status === 201) {
+        thunkAPI.dispatch(getBookItems());
+      }
+      return null;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('Book not deleted');
+    }
+  });
 
 const booksSlice = createSlice({
   name: 'books',
-  initialState,
+  initialState: {
+    books: [],
+    isLoading: true,
+    error: null,
+  },
 
   reducers: {
-    addBook: (state, action) => {
-      state.books.push(action.payload);
+    // addBook: (state, action) => {
+    //   state.books.push(action.payload);
+    // },
+    // removeBook: (state, action) => {
+    //   const itemId = action.payload;
+    //   state.books = state.books.filter((book) => book.itemId !== itemId);
+    // },
+  },
+
+  extraReducers: {
+    [getBookItems.pending]: (state) => {
+      state.isLoading = true;
+      state.error = null;
     },
-    removeBook: (state, action) => {
-      const itemId = action.payload;
-      state.books = state.books.filter((book) => book.itemId !== itemId);
+    [getBookItems.fulfilled]: (state, action) => {
+      console.log(action);
+      state.isLoading = false;
+      state.books = action.payload;
+    },
+    [getBookItems.rejected]: (state) => {
+      state.isLoading = false;
+      state.error = true;
     },
   },
 });
-
-const { addBook, removeBook } = booksSlice.actions;
-export {
-  addBook,
-  removeBook,
-};
+//  export { addBook, removeBook } = booksSlice.actions;
+// export {
+//   addBook,
+//   removeBook,
+// };
 export default booksSlice.reducer;
