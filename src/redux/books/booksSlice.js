@@ -32,7 +32,6 @@ export const addBook = createAsyncThunk(
 
 export const removeBook = createAsyncThunk('books/deleteBook',
   async (itemId, thunkAPI) => {
-    // console.log(thunkAPI);
     try {
       const response = await axios.delete(`${apiURL}/${itemId}`);
 
