@@ -3,9 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const apiURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0vHIXZ1klByIbEZsVgzM/books';
 
-// const apiURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/POkfoISJQ9RXQgYIesxH/books';
 export const getBookItems = createAsyncThunk('books/getBookItems', async (_, thunkAPI) => {
-  // console.log(thunkAPI);
   try {
     const response = await axios.get(apiURL);
     return response.data; // Return the fetched data as the payload
