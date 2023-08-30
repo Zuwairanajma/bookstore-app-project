@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/BookState.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBookItems, removeBook } from '../redux/books/booksSlice';
@@ -15,24 +15,40 @@ const BookItems = () => {
     const { category, title, author } = book;
 
     return (
-      <div key={itemId} className="containerRender" style={{ display: 'flex' }}>
-        <div className="renderLeft">
-          <p>{category}</p>
-          <h3>{title}</h3>
-          <p>{author}</p>
-          <div className="leftButton">
-            <button className="leftButton" type="button">Comment</button>
-            <button
-              className="leftButton"
-              type="button"
-              onClick={() => dispatch(removeBook(itemId))}
-            >
-              Remove
-            </button>
-            <button className="leftButton" type="button">Edit</button>
+      <>
+        <div key={itemId} className="containerRender" style={{ display: 'flex' }}>
+          <div className="renderLeft">
+            <p>{category}</p>
+            <h3>{title}</h3>
+            <p>{author}</p>
+            <div className="leftButton">
+              <button className="leftButton" type="button">Comment</button>
+              <button
+                className="leftButton"
+                type="button"
+                onClick={() => dispatch(removeBook(itemId))}
+              >
+                Remove
+              </button>
+              <button className="leftButton" type="button">Edit</button>
+            </div>
           </div>
         </div>
-      </div>
+        <div className="renderRight">
+          <div className="middle">
+            <p className="Amid">Progress</p>
+            <div className="midRight">
+              <h4>60%</h4>
+              <h4>Completed</h4>
+            </div>
+          </div>
+          <div className="deepRight">
+            <p>Current Chapter</p>
+            <p>Chapter 15 </p>
+            <button className="blue" type="button">UPDATE PROGRESS</button>
+          </div>
+        </div>
+      </>
     );
   };
 

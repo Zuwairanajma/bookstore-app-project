@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
 import '../styles/BookForm.css';
@@ -27,43 +26,48 @@ const BookForm = () => {
     const { title, author, category } = bookData;
 
     if (title && author && category) {
+      const timestamp = Date.now(); // Using timestamp as a unique ID
       const newBook = {
-        item_id: nanoid(),
+        item_id: timestamp.toString(),
         ...bookData,
       };
       dispatch(addBook(newBook));
       setBookData(initialState);
     }
   };
+
   return (
     <div className="containerCreateBooks">
-      <h3>ADD NEW BOOK</h3>
       <form>
+        <h3>ADD NEW BOOK</h3>
         <input
           type="text"
+          name="title"
           placeholder="Book Title"
           value={bookData.title}
           onChange={inputChangehandler}
         />
         <input
           type="text"
+          name="author"
           placeholder="Book Author"
           value={bookData.author}
           onChange={inputChangehandler}
         />
         <select
           className="select"
+          name="category"
           value={bookData.category}
           onChange={inputChangehandler}
         >
           <option value="">Select Category</option>
           <option value="action">Action</option>
-          <option value="scienceFiction">Science Fiction</option>
-          <option value="economy">Economy</option>
+          <option value="Science/Fiction">Science/Fiction</option>
+          <option value="Economy">Economy</option>
         </select>
         <button
           className="btn"
-          type="submit"
+          type="button"
           onClick={handleAddBook}
         >
           ADD BOOK
