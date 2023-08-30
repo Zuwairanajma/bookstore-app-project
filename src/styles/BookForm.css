@@ -1,0 +1,31 @@
+.containerCreateBooks {
+  width: 90%;
+  height: 100px;
+  margin: 80px auto;
+  padding: 20px 0;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: none;
+}
+
+input {
+  width: 25%;
+  height: 40px;
+}
+
+.btn {
+  width: 20%;
+  height: 40px;
+  background-color: aqua;
+}
+
+.select {
+  width: 20%;
+  height: 40px;
+}

@@ -1,0 +1,46 @@
+.containerRender {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.renderLeft {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.renderRight {
+  margin-left: 300px;
+  margin-bottom: 20px;
+}
+
+.midRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-left: 100px;
+  margin-top: -40px;
+}
+
+.Amid {
+  margin-top: -60px;
+}
+
+.deepRight {
+  margin-left: 350px;
+  margin-top: -40px;
+}
+
+.middle {
+  gap: 40px;
+  margin-left: 100px;
+}
+
+.blue {
+  background-color: aqua;
+}
+
+.leftButton {
+  display: flex;
+}
