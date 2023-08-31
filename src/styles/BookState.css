@@ -1,7 +1,18 @@
-.containerRender {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Renderingcontainer {
   display: flex;
   flex-direction: row;
   width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .renderLeft {
@@ -13,6 +24,8 @@
 .renderRight {
   margin-left: 300px;
   margin-bottom: 20px;
+  align-items: center;
+  gap: 4rem;
 }
 
 .midRight {
@@ -24,12 +37,56 @@
 }
 
 .Amid {
-  margin-top: -60px;
+  /* margin-top: -60px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(#0290ff calc(var(--progress-value) * 1%), #e8e8e8 0);
+  animation: progress 2s 1 forwards;
+  position: relative;
+}
+
+.Amid::before {
+  content: attr(data-progress) '';
+  counter-reset: percentage;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes progress {
+  to {
+    --progress-value: 68;
+  }
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  color: var(--black-two);
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: var(--black-two);
 }
 
 .deepRight {
   margin-left: 350px;
   margin-top: -40px;
+  width: 300px;
 }
 
 .middle {
@@ -38,9 +95,39 @@
 }
 
 .blue {
-  background-color: aqua;
+  background-color: #4386bf;
 }
 
 .leftButton {
   display: flex;
+  background-color: transparent;
+  width: 250px;
+  border: none;
+  color: #4386bf;
+}
+
+.cat {
+  /* width: 3.063rem;
+  height: 1.125rem; */
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black-two);
+}
+
+.tit {
+  /* width: 12.313rem;
+  height: 1.813rem; */
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.auth {
+  color: #4386bf;
+  margin-bottom: 20px;
 }

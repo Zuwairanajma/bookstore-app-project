@@ -16,11 +16,11 @@ const BookItems = () => {
 
     return (
       <>
-        <div key={itemId} className="containerRender" style={{ display: 'flex' }}>
+        <div key={itemId} className="Renderingcontainer" style={{ display: 'flex' }}>
           <div className="renderLeft">
-            <p>{category}</p>
-            <h3>{title}</h3>
-            <p>{author}</p>
+            <p className="cat">{category}</p>
+            <h3 className="tit">{title}</h3>
+            <p className="auth">{author}</p>
             <div className="leftButton">
               <button className="leftButton" type="button">Comment</button>
               <button
@@ -36,10 +36,12 @@ const BookItems = () => {
         </div>
         <div className="renderRight">
           <div className="middle">
-            <p className="Amid">Progress</p>
+            <div className="Amid">
+              <progress value="68%" min="0" max="100" style={{ visibility: 'hidden', height: '0', width: '0' }}>75%</progress>
+            </div>
             <div className="midRight">
-              <h4>60%</h4>
-              <h4>Completed</h4>
+              <h4 className="percent">68%</h4>
+              <h4 className="completed">Completed</h4>
             </div>
           </div>
           <div className="deepRight">
