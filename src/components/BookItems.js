@@ -45,8 +45,8 @@ const BookItems = () => {
             </div>
           </div>
           <div className="deepRight">
-            <p>Current Chapter</p>
-            <p>Chapter 15 </p>
+            <p className="current">Current Chapter</p>
+            <p className="chapter">Chapter 15 </p>
             <button className="blue" type="button">UPDATE PROGRESS</button>
           </div>
         </div>

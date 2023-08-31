@@ -38,8 +38,8 @@ const BookForm = () => {
 
   return (
     <div className="containerCreateBooks">
+      <h3 className="Add">ADD NEW BOOK</h3>
       <form>
-        <h3>ADD NEW BOOK</h3>
         <input
           type="text"
           name="title"
