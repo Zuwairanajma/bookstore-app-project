@@ -18,9 +18,6 @@ form {
 }
 
 input {
-  /* width: 25%; */
-
-  /* height: 40px; */
   width: 17.813rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0;
@@ -39,8 +36,6 @@ input {
 }
 
 .btn {
-  /* width: 20%;
-  height: 40px; */
   width: 12.5rem;
   height: 2.813rem;
   margin: 1.188rem 0 0 2.125rem;
@@ -50,9 +45,6 @@ input {
   font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
@@ -60,8 +52,6 @@ input {
 }
 
 .select {
-  /* width: 20%;
-  height: 40px; */
   width: 17.813rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0;
