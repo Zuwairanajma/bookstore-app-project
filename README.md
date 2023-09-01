@@ -111,6 +111,7 @@ npm test
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Fetch data from API**
+- **Add more UI design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

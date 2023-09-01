@@ -33,7 +33,7 @@ const BookItems = () => {
               <button className="leftButton" type="button">Edit</button>
             </div>
           </div>
-        </div>
+       
         <div className="renderRight">
           <div className="middle">
             <div className="Amid">
@@ -49,6 +49,7 @@ const BookItems = () => {
             <p className="chapter">Chapter 15 </p>
             <button className="blue" type="button">UPDATE PROGRESS</button>
           </div>
+        </div>
         </div>
       </>
     );

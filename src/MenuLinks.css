@@ -44,3 +44,7 @@
   text-decoration: none;
   color: #121212;
 }
+
+.nav-container {
+  display: block;
+}
