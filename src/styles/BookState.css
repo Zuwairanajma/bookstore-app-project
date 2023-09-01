@@ -11,45 +11,40 @@ body {
   flex-direction: row;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  width: 75rem;
+  width: 83rem;
   height: 10.625rem;
-  margin: 0 0.063rem 0.938rem 0;
   padding: 2rem 7.438rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
   margin-bottom: 20px;
   justify-content: space-between;
+  margin-left: 3rem;
 }
 
 .renderLeft {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  flex-wrap: nowrap;
 }
 
 .renderRight {
   display: flex;
-  /* margin-left: 400px; */
-  /* margin-bottom: 40px; */
   align-items: center;
-  /* gap: 4rem; */
   justify-content: space-between;
-  /* margin-top: -50px; */
-  /* width: 800px; */
+  gap: 4rem;
+  width: 40%;
 }
 
 .midRight {
   display: flex;
   flex-direction: column;
-  /* gap: -20px; */
-  /* margin-left: 60px; */
-  margin-top: 20px;
+  margin-top: 30px;
   height: 4.25rem;
 }
 
 .Amid {
-  /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,14 +97,15 @@ body {
 }
 
 .deepRight {
-  margin-left: 50px;
-  /* margin-top: -120px; */
   width: 400px;
+  margin-right: -10.7rem;
+  margin-top: -40px;
 }
 
 .middle {
-  gap: -20px;
+  gap: 10px;
   display: flex;
+  margin-left: 200px;
 }
 
 .blue {
@@ -123,6 +119,7 @@ body {
   letter-spacing: 0.5px;
   align-items: center;
   border: 1px transparent;
+  margin-top: 1.8rem;
 }
 
 .leftButton {
@@ -131,6 +128,17 @@ body {
   width: 250px;
   border: none;
   color: #4386bf;
+  gap: 10px;
+  height: 1.56rem;
+  text-align: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .cat {
@@ -147,18 +155,28 @@ body {
   font-size: 1.375rem;
   font-weight: bold;
   letter-spacing: -0.2px;
-  color: var(--black-two);
+  color: #121212;
+  width: 100%;
+  text-overflow: ellipsis;
+  text-align: start;
 }
 
 .auth {
   color: #4386bf;
   margin-bottom: 20px;
+  font-size: 0.875rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .chapter {
   width: 4.688rem;
   height: 1.313rem;
-  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  margin: 0.438rem 0.813rem 0.25rem 0;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 300;
@@ -173,7 +191,7 @@ body {
   color: #121212;
   width: 7.875rem;
   height: 1.125rem;
-  margin: 0.063rem 3.625rem 0 3.688rem;
+  margin: 0.063rem 0.625rem 0 0;
   opacity: 0.5;
   font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
@@ -182,4 +200,11 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.Line-2 {
+  width: 0.125rem;
+  height: 1.5rem;
+  margin: 0 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
 }

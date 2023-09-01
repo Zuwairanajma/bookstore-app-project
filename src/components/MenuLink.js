@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import '../MenuLinks.css';
-import { UilUser } from '@iconscout/react-unicons';
+import { FaUser } from 'react-icons/fa';
 
 function MenuLink() {
   return (
@@ -12,7 +12,7 @@ function MenuLink() {
         <Link className="NavL" style={{ color: 'hsla(0,0%,8%,.6)' }} to="/categories">CATEGORIES</Link>
       </nav>
       <div className="nav-container">
-        <UilUser size="31" color="#0290ff" />
+        <FaUser size={28} color="#0290ff" />
       </div>
     </div>
   );

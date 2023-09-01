@@ -23,6 +23,7 @@ const BookItems = () => {
             <p className="auth">{author}</p>
             <div className="leftButton">
               <button className="leftButton" type="button">Comment</button>
+              <div className="Line-2" />
               <button
                 className="leftButton"
                 type="button"
@@ -30,26 +31,27 @@ const BookItems = () => {
               >
                 Remove
               </button>
+              <div className="Line-2" />
               <button className="leftButton" type="button">Edit</button>
             </div>
           </div>
-       
-        <div className="renderRight">
-          <div className="middle">
-            <div className="Amid">
-              <progress value="68%" min="0" max="100" style={{ visibility: 'hidden', height: '0', width: '0' }}>75%</progress>
+
+          <div className="renderRight">
+            <div className="middle">
+              <div className="Amid">
+                <progress value="68%" min="0" max="100" style={{ visibility: 'hidden', height: '0', width: '0' }}>75%</progress>
+              </div>
+              <div className="midRight">
+                <h4 className="percent">68%</h4>
+                <h4 className="completed">Completed</h4>
+              </div>
             </div>
-            <div className="midRight">
-              <h4 className="percent">68%</h4>
-              <h4 className="completed">Completed</h4>
+            <div className="deepRight">
+              <p className="current">Current Chapter</p>
+              <p className="chapter">Chapter 15 </p>
+              <button className="blue" type="button">UPDATE PROGRESS</button>
             </div>
           </div>
-          <div className="deepRight">
-            <p className="current">Current Chapter</p>
-            <p className="chapter">Chapter 15 </p>
-            <button className="blue" type="button">UPDATE PROGRESS</button>
-          </div>
-        </div>
         </div>
       </>
     );
